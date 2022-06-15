@@ -1,0 +1,35 @@
+@mixin title {
+   color: $title__color;
+   font-size: $title__font_size;
+   line-height: $title__line_height;
+   font-weight: $title__font_weight;
+   font-family: $title__font_family;
+}
+
+@mixin paragraph {
+   color: $p__text__color;
+   font-size: $p__text__font_size;
+   line-height: $p__text__line_height;
+   font-weight: $p__text__font_weight;
+}
+
+@mixin btn {
+   color: $btn__color;
+   background: $btn__background;
+   font-size: $btn__font_size;
+   line-height: $btn__line_height;
+   font-weight: $btn__font_weight;
+   padding: 16px 32px;
+   border: none;
+   border-radius: 4px;
+   position: relative;
+   cursor: pointer;
+   font-family: "Inter", sans-serif;
+   transition: all 0.3s;
+}
+
+@mixin flex {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}

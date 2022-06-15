@@ -1,0 +1,31 @@
+.header {
+    padding: 45px 0 35px 0;
+    .flex__container {
+       @include flex;
+       align-items: center;
+    }
+    &__title {
+       @include title;
+    }
+    .nav {
+       &__menu {
+          @include flex;
+          width: 275px;
+       }
+       &__item {
+          color: #192252;
+          & :hover {
+             transition: all 0.3s;
+             color: #5063df;
+          }
+       }
+       &__link {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 19px;
+       }
+    }
+    &__btn {
+       padding: 14px 16px;
+    }
+ }

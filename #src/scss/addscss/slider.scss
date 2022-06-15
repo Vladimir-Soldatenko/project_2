@@ -1,0 +1,41 @@
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.slider .slick {
+    position: relative;
+    &__item {
+        display: flex;
+        justify-content: center;
+    }
+    &-list {
+        overflow: hidden;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    &-track {
+        display: flex;
+    }
+    &-arrow {
+        font-size: 0;
+    }
+    &-dots {
+        display: flex;
+        justify-content: center;
+        // margin: 40px 0 140px 0;
+    }
+}
+.slider .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    margin: 10px 12px;
+    background: url("../img/dot.svg") no-repeat;
+    cursor: pointer;
+}
+.slider .slick-dots li[class="slick-active"] button {
+    background: url("../img/dot_active.svg") no-repeat;
+}

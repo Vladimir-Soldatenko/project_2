@@ -1,0 +1,362 @@
+@import "./addscss/resets.scss";
+@import "./addscss/variables.scss";
+@import "./addscss/mixins.scss";
+@import "./addscss/header.scss";
+@import "./addscss/slider.scss";
+@import "./addscss/footer.scss";
+@import "./addscss/modal.scss";
+@import "./addscss/burger__menu.scss";
+
+
+body {
+   background: #ffffff;
+   color: #192252;
+   font-family: "Inter", sans-serif;
+   font-size: 18px;
+}
+.btn {
+   @include btn;
+   &:before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #5063df ;
+      opacity: 0.5;
+      border-radius: 4px;
+      transition: all 1s ease;
+   }
+   &:hover:before {
+      height: 100%;
+   }
+}
+.text {
+   @include paragraph;
+}
+.title {
+   @include title;
+}
+.wrapper {
+   max-width: 1230px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+.container {
+   @include flex;
+}
+
+.container_2 {
+   flex-direction: row-reverse;
+}
+.description {
+   margin-top: 115px;
+   width: 58%;
+   &__title {
+      margin-bottom: 25px;
+   }
+   &__text {
+      width: 84%;
+      margin-bottom: 16px;
+   }
+}
+.image {
+   @include flex;
+}
+.reservation {
+   margin-bottom: 260px;
+   &__description {
+      width: 45%;
+      margin-top: 215px;
+      &__title {
+         font-size: 48px;
+         line-height: 72px;
+         margin-bottom: 25px;
+      }
+      &__text {
+         margin-bottom: 32px;
+      }
+   }
+   &__image {
+      margin-top: 80px;
+      &__part {
+         margin-right: 24px;
+         &:nth-child(2) {
+            margin-top: 80px;
+         }
+         &:last-child {
+            margin: 0;
+         }
+         &__house {
+            box-shadow: 3px 9px 16px 0px #d5d5d5;
+         }
+      }
+   }
+}
+
+.about {
+   .container_2 {
+      margin-bottom: 160px;
+   }
+   &__description {
+      width: 58%;
+      margin: 105px 0 0 0;
+      &__title {
+         margin-bottom: 25px;
+      }
+      &__text {
+         width: 84%;
+         margin-bottom: 16px;
+         &:nth-child(3) {
+            margin-bottom: 32px;
+         }
+      }
+   }
+}
+.benefit {
+   margin-bottom: 160px;
+   &__image__block {
+      margin: 0 120px 32px 0;
+
+   }
+}
+.rooms {
+   margin-bottom: 160px;
+   &__head {
+      max-width: 590px;
+      margin: 0 auto 90px auto;
+      text-align: center;
+   }
+   &__text {
+      margin-bottom: 32px;
+   }
+   &__choice {
+      @include flex;
+      &__card {
+         max-width: 380px;
+      }
+      &__photo {
+         margin-bottom: 32px;
+      }
+      &__title {
+         font-size: 24px;
+         line-height: 36px;
+         color: #000000;
+         margin-bottom: 16px;
+      }
+      &__description {
+         margin-bottom: 32px;
+      }
+      &__link {
+         position: relative;
+         color: #424f7b;
+         &::after {
+            content: url("../img/arrow_right.svg");
+            position: absolute;
+            right: -33px;
+            top: 2px;
+            &:hover {
+               color: #51bfff;
+            }
+         }
+         &:hover {
+            transition: all 0.3s;
+            color: #51bfff;
+         }
+      }
+   }
+}
+.room {
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.5s;
+   display: grid;
+   margin-top: 50px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   gap: 30px;
+   &__photo {
+      width: 350px;
+      height: 290px;
+      margin: 0 auto;
+   }
+   &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+}
+.room__active {
+   position: relative;
+   opacity: 1;
+   visibility: visible;
+}
+
+.get-room {
+   margin-bottom: 160px;
+   &__container {
+      @include flex;
+   }
+   &__description {
+      width: 45%;
+      &__subtitle {
+         color: #424f7b;
+         font-size: 16px;
+         line-height: 24px;
+         margin-bottom: 12px;
+      }
+      &__title {
+         margin-bottom: 24px;
+      }
+      &__text {
+         width: 80%;
+         margin-bottom: 32px;
+      }
+   }
+   .flex__btn {
+      display: flex;
+
+      &_btn_2 {
+         color: #0e1734;
+         background: none;
+         border: none;
+         border-radius: 4px;
+         font-size: 16px;
+         margin-left: 24px;
+         padding: 16px 32px;
+         cursor: pointer;
+         &:hover {
+            transition: all 0.3s;
+            background: #4ee7d3;
+         }
+      }
+   }
+   &__info {
+      &__block {
+         width: 588px;
+         box-shadow: 6px 5px 13px #e5e5e5;
+         padding: 32px 36px;
+         border-radius: 4px;
+         margin-bottom: 24px;
+         &__title {
+            position: relative;
+            font-family: "Montserrat";
+            color: #424f7b;
+            font-size: 24px;
+            line-height: 36px;
+            cursor: pointer;
+            &::after {
+               content: url("../img/arrow_down.svg");
+               position: absolute;
+               background: #ff620a1f;
+               width: 40px;
+               height: 40px;
+               border-radius: 50%;
+               text-align: center;
+               line-height: 50px;
+               right: 0;
+               cursor: pointer;
+            }
+         }
+         &__description {
+            margin-top: 24px;
+            overflow: hidden;
+            transition: all .3s;
+            max-height: 0;
+            &.text{
+               margin: 0;
+            }
+
+         }
+      }
+   }
+}
+
+
+.reviews {
+   margin-bottom: 120px;
+   &__title {
+      text-align: center;
+      margin-bottom: 60px;
+   }
+   &__text {
+      margin: 45px 0;
+      text-align: center;
+   }
+   &__user {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      &__photo {
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+      }
+   }
+   &__username {
+      text-align: center;
+   }
+}
+
+.add__info {
+   position: absolute;
+   transform: translate(-100%, 0px);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 1s;
+   margin: 25px 0 20px 0;
+}
+.add__info_active {
+   position: relative;
+   transform: translate(0px, 0px);
+   opacity: 1;
+   visibility: visible;
+}
+
+.about__add__info {
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.5s;
+   margin: 25px 0 20px 0;
+}
+.about__add__info_active {
+   position: relative;
+   opacity: 1;
+   visibility: visible;
+   transition: all 1s;
+}
+
+
+.visible {
+   opacity: 1;
+   visibility: visible;
+}
+
+
+.about__container{
+   transform: translate(0px, 50%);
+   opacity: 0;
+   overflow: hidden;
+   transition: all .5s ease-in-out;
+}
+.about__container.active-move{
+   transform: translate(0, 0);
+   opacity: 1;
+   overflow: visible;
+}
+.rooms__choice{
+   transform: translate(-100%, 0px);
+   opacity: 0;
+   overflow: hidden;
+   transition: all 1s ;
+}
+.rooms__choice.active-move{
+  transform: translate(0px, 0px);
+   opacity: 1;
+   overflow: visible;
+}
+
+@import "./addscss/media.scss";

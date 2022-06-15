@@ -1,0 +1,45 @@
+.footer {
+    background: #0b265a;
+    color: #ffffff;
+    padding-bottom: 120px;
+    &__container {
+       @include flex;
+    }
+    &__logo {
+       width: 37%;
+       &__title {
+          margin: 120px 0 15px 0;
+       }
+       &__description {
+          width: 190px;
+          margin-bottom: 40px;
+       }
+    }
+    &__social {
+       &__links {
+          margin-right: 25px;
+          &:last-child {
+             margin: 0;
+          }
+       }
+    }
+    &__nav {
+       margin-top: 120px;
+       &__title {
+          font-size: 16px;
+          letter-spacing: 0.01em;
+       }
+       &__menu {
+          &__item {
+             margin-top: 25px;
+             &__link {
+                font-size: 16px;
+                transition: all 0.5s;
+                &:hover {
+                   color: #4ee7d3;
+                }
+             }
+          }
+       }
+    }
+ }

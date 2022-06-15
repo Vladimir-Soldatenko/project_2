@@ -1,0 +1,158 @@
+@media screen and(max-width: 1250px) {
+   .container,
+   .container_2 {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-bottom: 25px;
+   }
+   .reservation {
+      margin-bottom: 20px;
+      &__description {
+         width: 100%;
+         text-align: center;
+         &__text {
+            width: 100%;
+         }
+      }
+   }
+   .description {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      &__text {
+         width: 100%;
+         text-align: center;
+      }
+   }
+   .about {
+      margin-bottom: 20px;
+      &__description {
+         &__text {
+            margin: 0 auto;
+            width: 100%;
+         }
+      }
+   }
+   .benefit {
+      margin-bottom: 160px;
+      &__image {
+         width: 385px;
+      }
+      &__image__block {
+         margin: 0 auto;
+      }
+   }
+   .rooms__choice {
+      flex-direction: column;
+      align-items: center;
+      &__card {
+         margin-bottom: 30px;
+      }
+   }
+   .room__single,
+   .room__dbl,
+   .room__cootage {
+      display: flex;
+      flex-direction: column;
+   }
+   .get-room__description {
+      width: 100%;
+   }
+}
+
+@media screen and(max-width: 1120px) {
+   .get-room {
+      &__container {
+         flex-direction: column;
+         align-items: center;
+      }
+      &__description {
+         text-align: center;
+         &__text {
+            width: 100%;
+         }
+      }
+      &__info {
+         margin-top: 25px;
+      }
+      .flex__btn {
+         justify-content: center;
+      }
+   }
+}
+
+@media screen and(max-width: 750px) {
+   .header{
+      display: none;
+   }
+   .burger__menu__btn {
+      display: inline-block;
+   }
+   .get-room__info__block {
+      width: 350px;
+   }
+   .footer {
+      &__container {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+      }
+      &__nav {
+         margin-top: 20px;
+      }
+      &__logo__description {
+         width: 100%;
+      }
+      &__logo__title{
+         margin: 30px 0 15px;
+      }
+   }
+   .modal{
+      width: 90%;
+   }
+}
+
+@media screen and(max-width: 650px) {
+   .reservation {
+      &__image__part {
+         width: 100px;
+         margin-right: 20px;
+         &__house {
+            width: 100%;
+         }
+      }
+   }
+   .about__image__block__img {
+      width: 100%;
+   }
+   .image__block {
+      width: 350px;
+      &__img {
+         width: 100%;
+      }
+   }
+   .benefit{
+      margin-bottom: 60px;
+      &__image__block__img {
+         width: 100%;
+      }
+   }
+   .rooms__choice__photo {
+      width: 350px;
+      margin: 0 auto;
+      &__img{
+         width: 100%;
+      }
+   }
+}
+
+@media screen and(max-width: 510px) {
+   .reservation {
+      &__image{
+         margin-top: 110px;
+      }
+   }
+   .footer__logo{
+      width: 100%;
+   }
+}
